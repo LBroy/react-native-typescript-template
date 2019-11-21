@@ -6,6 +6,10 @@
     "start": "react-native start",
     "ios": "react-native run-ios",
     "android": "react-native run-android",
+    "clean-repo": "rm -rf node_modules && rm -rf ios/Pods",
+    "pod-install": "cd ios && pod install && cd ..",
+    "dev:ios": "npm run clean-repo && npm ci && npm run pod-install && npm run ios",
+    "dev:android": "npm run clean-repo && npm ci && npm run pod-install && npm run android",
     "test": "jest --config jest.config.js",
     "test:coverage": "jest --config jest.config.js --coverage",
     "lint": "tsc --noEmit && eslint 'src/**/*.{js,ts,tsx}' --quiet --fix"
