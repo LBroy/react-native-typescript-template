@@ -24,6 +24,7 @@ module.exports = {
   },
   rules: {
     '@typescript-eslint/explicit-function-return-type': OFF,
+    '@typescript-eslint/explicit-member-accessibility': OFF,
     'react-hooks/rules-of-hooks': ERROR,
     'react-hooks/exhaustive-deps': WARN,
   },
